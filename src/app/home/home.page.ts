@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChildren } from '@angular/core';
+import {IonSlides } from '@ionic/angular';
+
+
 
 @Component({
   selector: 'app-home',

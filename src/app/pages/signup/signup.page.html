@@ -1,0 +1,61 @@
+
+
+
+
+<ion-header  style="--background: white;">
+    <ion-toolbar style=" --background: white;">
+      <ion-buttons (onClick)="toLogin()" slot="start" style=" --background: black;">
+          <ion-back-button defaultHref="login" ></ion-back-button>
+      </ion-buttons>    
+    </ion-toolbar> 
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <div style="margin-top: 100px;">
+             <img src="assets/images/teslaletras.png" alt="tesla project ">
+          </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <div style="margin-top: 100px; text-align: center;">
+            <h3 style="color: black;">SignUp (Fill the form)</h3>
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+    <form #form="ngForm" style="margin-top: 50px; ">
+        <ion-grid>
+          <ion-row style="background-color: white;" justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+              <div text-center>
+                <h3>Login</h3>
+              </div>
+              <div padding>
+                <ion-item>
+                  <ion-input style="color: black;" name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input style="color: black;" name="password" type="password" placeholder="Password" ngModel required></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-input style="color: black;" name="password" type="password" placeholder="Confirm Password" ngModel required></ion-input>
+                  </ion-item>
+              </div>
+              <div padding>
+                <ion-button style="color: white;" size="large" type="submit" [disabled]="form.invalid" expand="block">Create Account</ion-button>
+
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+   
+
+</ion-content>

@@ -1,0 +1,47 @@
+
+
+<ion-content>
+ 
+          <div style="margin-top: 100px;">
+              <img src="assets/images/teslaletras.png" alt="tesla project ">
+          </div>
+          <div style="margin-top: 90px; text-align: center;" >
+              <img style=" height: 100px; width: 100px;" src="assets/images/charge.jpg" alt="tesla project ">
+          </div>
+        
+        
+ 
+        <form #form="ngForm" style="margin-top: 100px;">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div style="text-align: center;">
+                  <h3 style="color: black; ">WELCOME</h3>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row style="background-color: white;" justify-content-center>
+              <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                <div text-center>
+                  <h3>Login</h3>
+                </div>
+                <div padding>
+                  <ion-item>
+                    <ion-input style="color: black;" name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input style="color: black;" name="password" type="password" placeholder="Password" ngModel required></ion-input>
+                  </ion-item>
+                </div>
+                <div padding>
+                  <ion-button style="color: white;" size="large" type="submit" [disabled]="form.invalid" expand="block">Login</ion-button>
+                  <ion-button (click)="toSignUpPage()" style="color: white;" size="large"   expand="block">SignUp</ion-button>
+
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </form>
+     
+
+</ion-content>
